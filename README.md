@@ -1,5 +1,5 @@
-# sales_taxes
-Quick implementation of problem #1 for itemis assessment.
+# Problem #1 Sales Taxes
+Quick implementation of problem #1 for `itemis` assessment.
 Please read assignment instructions for further information.
 
 ## Requirements
@@ -7,7 +7,7 @@ Please read assignment instructions for further information.
 + no further dependencies
 
 ## Usage 
-Just run `./sales_taxes.py <basket file>` within this folder. first parameter 
+Just run `./sales_taxes.py <basket file>` within this folder. First parameter 
 should be your basket file, which contains sales positions.
 
 ## Assumptions
