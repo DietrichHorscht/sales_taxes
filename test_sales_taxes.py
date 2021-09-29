@@ -1,9 +1,17 @@
 import unittest
 
-from sales_taxes import round_up_tax, get_tax_rate_by_description
+from sales_taxes import round_up_tax, get_tax_rate_by_description, read_line
 
 
 class MyTestCase(unittest.TestCase):
+    def test_read_line(self):
+        self.assertTupleEqual((1, "imported box of chocolates", 10.00),
+                              read_line("1 imported box of chocolates at 10.00"))
+        self.assertEqual((None, None, None), read_line("1.2 imported box of chocolates at 10.00"))
+        self.assertEqual((None, None, None), read_line("1 imported box of chocolates at 10.00 10"))
+        self.assertEqual((None, None, None), read_line("xxxx"))
+
+
     def test_get_tax_rate(self):
         # books
         self.assertEqual(0.0, get_tax_rate_by_description("Harry Potter BOOK"))
